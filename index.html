@@ -1,581 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assaduzzaman Munna | AI/ML Specialist & Systems Engineer</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Assaduzzaman Munna, AI/ML Specialist and Software Engineer. Specializing in computer vision, knowledge distillation, edge deployment (NVIDIA DeepStream), and high-throughput pipelines.">
-    <meta name="keywords" content="Assaduzzaman Munna, AI Engineer, Machine Learning Specialist, Deep Learning Architect, Edge AI, Computer Vision, MLOps, PyTorch, Knowledge Distillation, Dhaka, Bangladesh">
-    <meta name="author" content="Assaduzzaman Munna">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://iam-ajmunna.github.io/">
-    <meta property="og:title" content="Assaduzzaman Munna | AI/ML Specialist & Systems Engineer">
-    <meta property="og:description" content="Bridging cutting-edge deep learning research with scalable, edge-ready software architectures. Discover computer vision systems and model optimization projects.">
-    <meta property="og:image" content="https://iam-ajmunna.github.io/images/website-preview.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://iam-ajmunna.github.io/">
-    <meta property="twitter:title" content="Assaduzzaman Munna | AI/ML Specialist & Systems Engineer">
-    <meta property="twitter:description" content="Bridging cutting-edge deep learning research with scalable, edge-ready software architectures. Discover computer vision systems and model optimization projects.">
-    <meta property="twitter:image" content="https://iam-ajmunna.github.io/images/website-preview.png">
+  <!-- ── SEO ── -->
+  <title>Assaduzzaman Munna — AI/ML Engineer & Researcher</title>
+  <meta name="description" content="IEEE-published AI/ML Engineer and researcher. Building intelligent systems from research to production deployment. Currently at The Data Island, North South University.">
+  <meta name="keywords" content="AI Engineer, Machine Learning, Computer Vision, PyTorch, Transformers, Bangladesh, NSU, Research">
+  <meta name="author" content="Assaduzzaman Munna">
+  <link rel="canonical" href="https://iam-ajmunna.github.io">
 
-    <!-- Assets -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://iam-ajmunna.github.io">
+  <meta property="og:title"       content="Assaduzzaman Munna — AI/ML Engineer & Researcher">
+  <meta property="og:description" content="IEEE-published AI/ML Engineer. Transforming research into real-world intelligent systems.">
+  <meta property="og:image"       content="https://iam-ajmunna.github.io/og-image.jpg">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Assaduzzaman Munna — AI/ML Engineer">
+  <meta name="twitter:description" content="IEEE-published AI/ML Engineer. Building intelligent systems that matter.">
+
+  <!-- ── Favicon (inline SVG data-URI) ── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233B82F6'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='white'>M</text></svg>">
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Motion Graphics Elements -->
-    <canvas id="neural-canvas"></canvas>
-    <div class="matrix-grid"></div>
 
-    <!-- Navigation HUD -->
-    <nav class="navbar" aria-label="Main Navigation">
-        <div class="nav-content">
-            <a href="#" class="logo" aria-label="Assaduzzaman Munna Homepage">
-                <img src="images/favicon.ico" alt="AJ" class="logo-img">A.Munna
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════ -->
+<nav>
+  <a href="#hero" class="nav-logo">A<span>.</span>Munna</a>
+
+  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Research</a></li>
+    <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Introduction">
+
+  <!-- LEFT: Content -->
+  <div class="hero-content fade-up">
+
+    <div class="hero-badge">
+      <span class="hero-badge-dot" aria-hidden="true"></span>
+      Open to Opportunities
+    </div>
+
+    <h1 class="hero-name">
+      Assaduzzaman<br>
+      <span class="highlight">Munna</span>
+    </h1>
+
+    <p class="hero-title">AI/ML Engineer &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Builder</p>
+
+    <p class="hero-description">
+      I build intelligent systems that bridge the gap between research papers and 
+      real-world deployment. IEEE&#8209;published, industry&#8209;trained, and driven by one 
+      question: <em>how do we make AI actually work at scale?</em>
+    </p>
+
+    <div class="hero-actions">
+      <a href="Assaduzzaman_Munna_CV.pdf" download class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+      <a href="#contact" class="btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Get in Touch
+      </a>
+    </div>
+
+    <div class="hero-stats" aria-label="Key stats">
+      <div>
+        <div class="hero-stat-value" aria-label="GPA 3.75 out of 4">3.75</div>
+        <div class="hero-stat-label">CGPA / 4.00</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">2×</div>
+        <div class="hero-stat-label">Publications</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">99.8%</div>
+        <div class="hero-stat-label">Model Accuracy</div>
+      </div>
+    </div>
+
+  </div><!-- /hero-content -->
+
+  <!-- RIGHT: Photo -->
+  <div class="hero-image-wrap fade-up" style="transition-delay:0.15s">
+    <div class="hero-image-glow" aria-hidden="true"></div>
+    <div class="hero-image-frame">
+      <img
+        src="hero-profile-enhanced.png"
+        alt="Assaduzzaman Munna — AI/ML Engineer"
+        loading="eager"
+        fetchpriority="high"
+      >
+      <!-- floating availability badge -->
+      <div class="hero-image-tag" aria-label="Currently available">
+        <span class="hero-image-tag-dot" aria-hidden="true"></span>
+        Available
+      </div>
+      <!-- floating university badge -->
+      <div class="hero-image-badge">
+        <div class="hero-image-badge-icon" aria-hidden="true">🏛️</div>
+        <div class="hero-image-badge-text">
+          <strong>North South University</strong>
+          <span>BSc CSE &nbsp;·&nbsp; 2022–2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll cue -->
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-hint-line"></div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     TECH MARQUEE
+════════════════════════════════════════════════════ -->
+<div class="marquee-section" aria-hidden="true" role="presentation">
+  <div class="marquee-track">
+    <span class="marquee-item">PyTorch</span><span class="marquee-sep"></span>
+    <span class="marquee-item">TensorFlow</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Hugging Face</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Vision Transformers</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Knowledge Distillation</span><span class="marquee-sep"></span>
+    <span class="marquee-item">MLOps</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Docker</span><span class="marquee-sep"></span>
+    <span class="marquee-item">React.js</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Next.js</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Flutter</span><span class="marquee-sep"></span>
+    <span class="marquee-item">IEEE Published</span><span class="marquee-sep"></span>
+    <span class="marquee-item">NVIDIA DeepStream</span><span class="marquee-sep"></span>
+    <span class="marquee-item">OpenCV</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Python</span><span class="marquee-sep"></span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">PyTorch</span><span class="marquee-sep"></span>
+    <span class="marquee-item">TensorFlow</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Hugging Face</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Vision Transformers</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Knowledge Distillation</span><span class="marquee-sep"></span>
+    <span class="marquee-item">MLOps</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Docker</span><span class="marquee-sep"></span>
+    <span class="marquee-item">React.js</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Next.js</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Flutter</span><span class="marquee-sep"></span>
+    <span class="marquee-item">IEEE Published</span><span class="marquee-sep"></span>
+    <span class="marquee-item">NVIDIA DeepStream</span><span class="marquee-sep"></span>
+    <span class="marquee-item">OpenCV</span><span class="marquee-sep"></span>
+    <span class="marquee-item">Python</span><span class="marquee-sep"></span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Visual -->
+      <div class="about-visual fade-up">
+        <div class="about-photo-stack">
+          <div class="about-photo-main">
+            <img
+              src="about-profile-enhanced.webp"
+              alt="Assaduzzaman Munna — professional portrait"
+              loading="lazy"
+            >
+          </div>
+          <div class="about-card-float" aria-hidden="true">
+            <div class="about-card-flag">🇯🇵</div>
+            <div class="about-card-label">Nippon AI Dojo</div>
+            <div class="about-card-sub">Chowa Giken · Japan · 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text fade-up" style="transition-delay:0.12s">
+        <div class="section-eyebrow">About Me</div>
+        <h2 class="section-title">Researcher.<br>Engineer.<br>Builder.</h2>
+
+        <p>I'm Assaduzzaman Munna — a final-year CSE student at <strong>North South University</strong> with a rare combination: peer-reviewed AI research published at IEEE and hands-on production engineering experience.</p>
+
+        <p>My work lives at the intersection of <strong>deep learning research and deployment reality</strong>. I don't just build models that score well on benchmarks — I build ones constrained by edge hardware, hospital imaging workflows, and factory-floor latency requirements.</p>
+
+        <p>I was <strong>competitively selected for Nippon AI Dojo 2025</strong> by Chowa Giken and AI Samurai Japan — working directly under Japanese AI industry mentors on real-world AI engineering problems. Currently, I serve as a <strong>Junior AI Engineer at The Data Island</strong> while also mentoring undergraduates as a <strong>Teaching Assistant</strong> in NSU's ECE Department.</p>
+
+        <p>Whether I'm designing cross-modal attention mechanisms, compressing a ConvNeXt teacher model by <strong>18.5× without accuracy loss</strong>, or walking a junior through backpropagation at 10 PM — I bring the same standard: <strong>precise, principled, and impactful.</strong></p>
+
+        <div class="about-highlights">
+          <div class="about-highlight-item">
+            <div class="about-highlight-icon">🔬</div>
+            <div class="about-highlight-title">IEEE Published</div>
+            <div class="about-highlight-desc">SATC 2026 Houston — Vision Transformers in medical imaging</div>
+          </div>
+          <div class="about-highlight-item">
+            <div class="about-highlight-icon">🏭</div>
+            <div class="about-highlight-title">Industry Trained</div>
+            <div class="about-highlight-desc">AI engineering at The Data Island + Japan AI Dojo mentorship</div>
+          </div>
+          <div class="about-highlight-item">
+            <div class="about-highlight-icon">🎓</div>
+            <div class="about-highlight-title">Top Academic</div>
+            <div class="about-highlight-desc">3.75/4.00 CGPA · Teaching Assistant, NSU ECE Dept.</div>
+          </div>
+          <div class="about-highlight-item">
+            <div class="about-highlight-icon">⚡</div>
+            <div class="about-highlight-title">Edge-First Mindset</div>
+            <div class="about-highlight-desc">99.80% accuracy · 18.5× compression · 9-min T4 training</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+
+    <div class="skills-header fade-up">
+      <div class="section-eyebrow">Capabilities</div>
+      <h2 class="section-title">What I bring<br>to the table</h2>
+      <p class="section-sub">From model architecture research to production deployment — a full-stack AI engineering skill set built through real research and industry practice.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card fade-up">
+        <div class="skill-card-header">
+          <div class="skill-card-icon icon-blue" aria-hidden="true">🧠</div>
+          <div class="skill-card-title">AI & Machine Learning</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Hugging Face</span>
+          <span class="skill-tag">Transformers</span>
+          <span class="skill-tag">Knowledge Distillation</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Fine-tuning</span>
+          <span class="skill-tag">MLOps</span>
+          <span class="skill-tag">SAM</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up" style="transition-delay:0.05s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon icon-teal" aria-hidden="true">👁️</div>
+          <div class="skill-card-title">Computer Vision</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Vision Transformers</span>
+          <span class="skill-tag">MobileViT</span>
+          <span class="skill-tag">CNNs</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">NVIDIA DeepStream</span>
+          <span class="skill-tag">FFmpeg</span>
+          <span class="skill-tag">Medical Imaging</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up" style="transition-delay:0.1s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon icon-green" aria-hidden="true">💻</div>
+          <div class="skill-card-title">Programming Languages</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Dart</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">LaTeX</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up" style="transition-delay:0.15s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon icon-purple" aria-hidden="true">🌐</div>
+          <div class="skill-card-title">Frontend & Mobile</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Flutter (Dart)</span>
+          <span class="skill-tag">RESTful APIs</span>
+          <span class="skill-tag">System Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up" style="transition-delay:0.2s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon icon-orange" aria-hidden="true">🛠️</div>
+          <div class="skill-card-title">DevOps & Data</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Linux (Ubuntu)</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-up" style="transition-delay:0.25s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon icon-pink" aria-hidden="true">📐</div>
+          <div class="skill-card-title">Research Methods</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Multimodal Learning</span>
+          <span class="skill-tag">Cross-modal Attention</span>
+          <span class="skill-tag">Edge Deployment</span>
+          <span class="skill-tag">Supervised Learning</span>
+          <span class="skill-tag">Data Preprocessing</span>
+          <span class="skill-tag">Model Evaluation</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Career</div>
+      <h2 class="section-title">Where I've<br>worked & learned</h2>
+    </div>
+
+    <div class="exp-timeline">
+
+      <!-- Role 1 -->
+      <div class="exp-item fade-up">
+        <div class="exp-dot"><div class="exp-dot-inner current" aria-label="Current role"></div></div>
+        <div class="exp-card">
+          <div class="exp-card-header">
+            <span class="exp-role">
+              Junior AI Engineer
+              <span class="exp-current-tag">Current</span>
+            </span>
+            <span class="exp-period">Apr 2026 – Present</span>
+          </div>
+          <div class="exp-company">The Data Island</div>
+          <ul class="exp-bullets">
+            <li>Building and optimising data pipelines for enterprise AI frameworks at production scale, integrating seamlessly into existing client infrastructure.</li>
+            <li>Collaborating with the core engineering team to design, test, and scale machine learning solutions across multiple deployment environments.</li>
+            <li>Onboarded as an AI engineering intern; rapidly integrated into core product engineering, contributing to model optimisation workflows from week one.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="exp-item fade-up" style="transition-delay:0.06s">
+        <div class="exp-dot"><div class="exp-dot-inner current" aria-label="Current role"></div></div>
+        <div class="exp-card">
+          <div class="exp-card-header">
+            <span class="exp-role">
+              Undergraduate Teaching Assistant
+              <span class="exp-current-tag">Current</span>
+            </span>
+            <span class="exp-period">Jun 2025 – Present</span>
+          </div>
+          <div class="exp-company">North South University — Department of ECE</div>
+          <ul class="exp-bullets">
+            <li>Facilitate weekly technical sessions and provide 1-on-1 mentorship to undergraduate students on core engineering and programming concepts.</li>
+            <li>Support faculty in curriculum delivery, grading technical assignments, and reinforcing foundational principles that underpin advanced AI coursework.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="exp-item fade-up" style="transition-delay:0.12s">
+        <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+        <div class="exp-card">
+          <div class="exp-card-header">
+            <span class="exp-role">On-the-Job Training — AI Engineering</span>
+            <span class="exp-period">Sep 2025 – Jan 2026</span>
+          </div>
+          <div class="exp-company">Nippon AI Dojo 2025 &nbsp;·&nbsp; Chowa Giken & AI Samurai Japan</div>
+          <ul class="exp-bullets">
+            <li>Competitively selected for a rigorous 5-month AI engineering program run by Japanese industry leaders — one of few Bangladeshi participants chosen.</li>
+            <li>Completed structured lectures on AI implementation and hands-on group projects under the direct mentorship of senior Japanese AI practitioners.</li>
+            <li>Developed expertise in model optimisation, real-world AI solution architecture, and cross-cultural engineering collaboration within a globally distributed team.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Work</div>
+      <h2 class="section-title">Projects that<br>solve real problems</h2>
+      <p class="section-sub">From micro-emotion recognition on edge devices to automated industrial inspection — built with research rigour and production intent.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- FEATURED: MiST-ER -->
+      <div class="project-card featured fade-up">
+        <div>
+          <div class="project-number">FLAGSHIP PROJECT · ONGOING</div>
+          <div class="project-metric">🧪 Deep Learning Research</div>
+          <h3 class="project-title">MiST-ER: Micro-emotion Selective Temporal Emotion Recognition</h3>
+          <p class="project-desc">
+            A lightweight multimodal AI pipeline combining Audio, Video, and Text streams for micro-emotion classification — one of the hardest open problems in affective computing.
+          </p>
+          <p class="project-desc">
+            The core challenge: genuine micro-expressions last 40–200 ms and are suppressed by social context, causing most systems to classify noise rather than emotion. MiST-ER isolates these frames using a custom cross-modal attention mechanism and bidirectional fusion layer, achieving 54% accuracy on the MESC benchmark while maintaining edge deployment viability.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">PyTorch</span>
+            <span class="project-tag">Multimodal AI</span>
+            <span class="project-tag">Transformers</span>
+            <span class="project-tag">Temporal Attention</span>
+            <span class="project-tag">Edge Deployment</span>
+            <span class="project-tag">NLP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/iam-ajmunna" target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
             </a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+          </div>
+        </div>
+        <div>
+          <div class="project-tech-box">
+            <div class="project-tech-box-title">Architecture Highlights</div>
+            <ul class="project-tech-list">
+              <li>Custom cross-modal attention across Audio, Video & Text modalities simultaneously</li>
+              <li>Bidirectional temporal fusion layer to isolate emotionally relevant frames and suppress noise</li>
+              <li>Optimised for resource-constrained edge deployment — minimal latency overhead vs accuracy</li>
+              <li>Benchmarked on MESC dataset — the standard for micro-expression recognition</li>
             </ul>
-            <div class="hud-status" aria-live="polite">
-                <span class="hud-pulse"></span>
-                <span>System: Operational</span>
-            </div>
+          </div>
+          <div style="margin-top:1.25rem; padding:1rem; background:rgba(59,130,246,0.04); border:1px solid rgba(59,130,246,0.1); border-radius:10px;">
+            <div style="font-size:0.72rem; font-weight:600; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.5rem;">Role</div>
+            <div style="font-size:0.87rem; color:var(--text); font-weight:500;">Deep Learning Architect</div>
+            <div style="font-size:0.78rem; color:var(--muted); margin-top:0.25rem; line-height:1.5;">Responsible for model architecture, fusion strategy, and deployment optimisation</div>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="hero" class="hero container">
-            <div class="hero-grid">
-                <div class="hero-text fade-in">
-                    <span class="section-tag">AI/ML & Systems Engineering</span>
-                    <h1 class="hero-headline">Assaduzzaman Munna</h1>
-                    <h2 class="hero-subtitle gradient-text">Optimizing Intelligence. Scaling Architectures.</h2>
-                    <p class="hero-desc">
-                        Bridging cutting-edge deep learning research with production-grade, edge-ready software. Specializing in computer vision models, knowledge distillation, multimodal temporal systems, and high-throughput deployment pipelines.
-                    </p>
-                    <div class="btn-container">
-                        <a href="#projects" class="btn-primary">
-                            Explore Work
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                        <a href="Assaduzzaman_Munna_CV.pdf" target="_blank" class="btn-secondary">
-                            Download Resume
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        </a>
-                    </div>
-                    
-                    <div class="hero-metrics">
-                        <div class="metric-item">
-                            <span class="metric-val gradient-text">18.5x</span>
-                            <span class="metric-lbl">Model Compression</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-val gradient-text">99.80%</span>
-                            <span class="metric-lbl">Renal CT Accuracy</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-val gradient-text">3.75</span>
-                            <span class="metric-lbl">CS CGPA (NSU)</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-visual fade-in">
-                    <!-- Scanning HUD Overlays -->
-                    <div class="floating-hud hud-top-right">
-                        <span>⚡ latency: 2.4ms</span>
-                    </div>
-                    <div class="hero-img-container">
-                        <img src="images/hero-profile-enhanced.png" alt="Portrait photo of Assaduzzaman Munna, AI/ML Specialist" class="hero-img" loading="eager">
-                    </div>
-                    <div class="floating-hud hud-bottom-left">
-                        <div><span>model:</span><span>hybrid_cnn_vit</span></div>
-                        <div><span>loss:</span><span>0.0042</span></div>
-                        <div><span>acc:</span><span>99.80%</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about" class="section container">
-            <div class="fade-in">
-                <span class="section-tag">// Journey & Philosophy</span>
-                <h3 class="section-title">The Engineering Perspective</h3>
-                <p class="section-desc">My technical core lies at the convergence of machine learning theory and system-level execution.</p>
-            </div>
-            
-            <div class="about-grid-content fade-in">
-                <div class="about-text">
-                    <p>
-                        I am an AI/ML Engineer driven by the challenge of deployment efficiency. I believe artificial intelligence shouldn't just run on high-end remote server racks—it must be compressed, optimized, and ready to deploy at the edge to impact real-world latency-constrained operations.
-                    </p>
-                    <p>
-                        Currently, I serve as a <strong>Junior AI Engineer at The Data Island</strong>, where I construct data processing pipelines and integrate robust machine learning frameworks for enterprise systems.
-                    </p>
-                    <p>
-                        Through academic endeavors at <strong>North South University</strong> (CSE Department, CGPA: 3.75) and selective industry programs like the <strong>Nippon AI Dojo 2025</strong> (mentored by Japanese industry leads from Chowa Giken and AI Samurai Japan), I have cultivated deep expertise in model distillation, neural network compression, and low-latency computer vision backend services.
-                    </p>
-                </div>
-                
-                <div class="about-img-container">
-                    <div class="about-matrix-bg">
-                        <div class="matrix-code-stream">
-                            <div>import torch</div>
-                            <div>import torch.nn as nn</div>
-                            <div>class StudModel(nn.Module):</div>
-                            <div>  def __init__(self):</div>
-                            <div>    super().__init__()</div>
-                            <div>    self.vit = MobileViT()</div>
-                            <div>  def forward(self, x):</div>
-                            <div>    return self.vit(x)</div>
-                            <div># Distilling knowledge...</div>
-                            <div>loss = KDDiv(alpha=0.9)</div>
-                            <div>opt = AdamW(model.parameters())</div>
-                            <div>epoch_acc = 0.9980</div>
-                            <div>parameters_reduction = 18.5x</div>
-                            <div>status: deploying_to_edge</div>
-                            <div>jetson_inference: running...</div>
-                            <div>latency_average = 2.4ms</div>
-                            <!-- Looping Break -->
-                            <div>import torch</div>
-                            <div>import torch.nn as nn</div>
-                            <div>class StudModel(nn.Module):</div>
-                            <div>  def __init__(self):</div>
-                            <div>    super().__init__()</div>
-                            <div>    self.vit = MobileViT()</div>
-                            <div>  def forward(self, x):</div>
-                            <div>    return self.vit(x)</div>
-                            <div># Distilling knowledge...</div>
-                            <div>loss = KDDiv(alpha=0.9)</div>
-                            <div>opt = AdamW(model.parameters())</div>
-                            <div>epoch_acc = 0.9980</div>
-                            <div>parameters_reduction = 18.5x</div>
-                            <div>status: deploying_to_edge</div>
-                            <div>jetson_inference: running...</div>
-                            <div>latency_average = 2.4ms</div>
-                        </div>
-                    </div>
-                    <div class="hud-bracket bracket-tl"></div>
-                    <div class="hud-bracket bracket-tr"></div>
-                    <div class="hud-bracket bracket-bl"></div>
-                    <div class="hud-bracket bracket-br"></div>
-                    <div class="scanline"></div>
-                    <img src="images/about-profile-enhanced.webp" alt="Assaduzzaman Munna at work" class="about-img" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <!-- Skill Matrix Bento Grid -->
-        <section id="skills" class="section container">
-            <div class="fade-in">
-                <span class="section-tag">// Core Competencies</span>
-                <h3 class="section-title">Technical Matrix</h3>
-                <p class="section-desc">Quantified competencies categorized by specialization layers.</p>
-            </div>
-            
-            <div class="skills-grid">
-                <!-- Category 1 -->
-                <div class="skill-category bento-card">
-                    <h4 class="skill-cat-title">
-                        <svg class="skill-cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                        Deep Learning & AI
-                    </h4>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">PyTorch</span><span class="skill-pct">92%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="92%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">TensorFlow & Keras</span><span class="skill-pct">80%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Hugging Face Transformers</span><span class="skill-pct">85%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Computer Vision (OpenCV)</span><span class="skill-pct">88%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="88%"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 2 -->
-                <div class="skill-category bento-card">
-                    <h4 class="skill-cat-title">
-                        <svg class="skill-cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                        Edge & Systems
-                    </h4>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">NVIDIA DeepStream</span><span class="skill-pct">78%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="78%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Docker Containers</span><span class="skill-pct">85%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">MLOps & Pipelines</span><span class="skill-pct">75%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="75%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Linux & Bash Shell</span><span class="skill-pct">82%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="82%"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 3 -->
-                <div class="skill-category bento-card">
-                    <h4 class="skill-cat-title">
-                        <svg class="skill-cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                        Engineering Languages
-                    </h4>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Python</span><span class="skill-pct">95%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="95%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">C++ Programming</span><span class="skill-pct">80%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">SQL Database Queries</span><span class="skill-pct">85%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Git & Version Control</span><span class="skill-pct">90%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="90%"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 4 -->
-                <div class="skill-category bento-card">
-                    <h4 class="skill-cat-title">
-                        <svg class="skill-cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                        Full-Stack Integration
-                    </h4>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">ReactJS / NextJS</span><span class="skill-pct">82%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="82%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">NodeJS Backend</span><span class="skill-pct">75%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="75%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">HTML5 / CSS3 Layouts</span><span class="skill-pct">90%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">RESTful APIs Integration</span><span class="skill-pct">86%</span></div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-value="86%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience Section -->
-        <section id="experience" class="section container">
-            <div class="fade-in">
-                <span class="section-tag">// History & Execution</span>
-                <h3 class="section-title">Timeline of Impact</h3>
-                <p class="section-desc">Industry roles and specialized training programs focused on high-performance AI deployment.</p>
-            </div>
-            
-            <div class="timeline">
-                <!-- Role 1 -->
-                <div class="timeline-item fade-in">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h4 class="timeline-role">Junior AI Engineer</h4>
-                            <span class="timeline-date">April 2026 - Present</span>
-                        </div>
-                        <h5 class="timeline-company">The Data Island</h5>
-                        <ul class="timeline-list">
-                            <li>Design, develop, and integrate enterprise AI frameworks, handling massive scale data ingestion.</li>
-                            <li>Establish high-efficiency, reliable data processing pipelines for machine learning operations.</li>
-                            <li>Collaborate closely with core developers to optimize deep learning training routines, significantly reducing inference compute times.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Role 2 -->
-                <div class="timeline-item fade-in">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h4 class="timeline-role">On-the-Job AI Trainee</h4>
-                            <span class="timeline-date">Sep 2025 - Jan 2026</span>
-                        </div>
-                        <h5 class="timeline-company">Nippon AI Dojo 2025 (Chowa Giken & AI Samurai Japan)</h5>
-                        <ul class="timeline-list">
-                            <li>Selected as one of the top candidates for a highly intensive AI engineering and model optimization program.</li>
-                            <li>Engineered production-level vision systems and model pipelines under direct training and review of industry architects in Japan.</li>
-                            <li>Successfully completed hands-on challenges regarding neural compression, quantization, and real-time edge processing constraints.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Role 3 -->
-                <div class="timeline-item fade-in">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h4 class="timeline-role">Undergraduate Teaching Assistant</h4>
-                            <span class="timeline-date">June 2025 - Present</span>
-                        </div>
-                        <h5 class="timeline-company">North South University (ECE Dept.)</h5>
-                        <ul class="timeline-list">
-                            <li>Conduct review sessions and facilitate laboratory exercises in core computer science and engineering coursework.</li>
-                            <li>Provide direct instruction and programming mentorship to over 80+ undergraduate engineering students.</li>
-                            <li>Support faculty in structural curriculum reviews and evaluate engineering course deliverables.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research & Publications Section -->
-        <section id="publications" class="section container">
-            <div class="fade-in">
-                <span class="section-tag">// Academic Contributions</span>
-                <h3 class="section-title">Research & Publications</h3>
-                <p class="section-desc">Peer-reviewed publications and manuscripts demonstrating optimized diagnostic systems and deep architectures.</p>
-            </div>
-            
-            <div class="pub-list">
-                <!-- Pub 1 -->
-                <div class="pub-card fade-in">
-                    <h4 class="pub-title">Hybrid CNN-MobileViT Model with Knowledge Distillation</h4>
-                    <span class="pub-conference">Submitted to SPICSCON 2026 (Under Review)</span>
-                    <p class="pub-summary">
-                        Engineered a compact hybrid student model combining spatial CNN features and transformer-based self-attention loops for efficient Renal Calculi Detection in CT Images. Used knowledge distillation to transfer features from a massive ConvNeXt-Tiny teacher.
-                    </p>
-                    <div class="pub-metrics-container">
-                        <span class="pub-metric-badge">Compression: <strong>18.5x parameters reduction</strong></span>
-                        <span class="pub-metric-badge">Inference Accuracy: <strong>99.80%</strong></span>
-                        <span class="pub-metric-badge">Compute: <strong>9 mins training on NVIDIA T4</strong></span>
-                    </div>
-                </div>
-
-                <!-- Pub 2 -->
-                <div class="pub-card fade-in">
-                    <h4 class="pub-title">Bone Fracture Detection Using Vision Transformers</h4>
-                    <span class="pub-conference">2026 IEEE 2nd International Conference on Secure IoT (SATC)</span>
-                    <p class="pub-summary">
-                        Conducted a comparative analysis of Pooling-based Vision Transformer (PiT) and CaFormer architectures against standard convolution models using a dataset of 4,083 annotated clinical X-ray images. Demonstrated superior generalization vectors and robustness in localized anomaly classification.
-                    </p>
-                    <div class="pub-metrics-container">
-                        <span class="pub-metric-badge">Validation Accuracy: <strong>97.51%</strong></span>
-                        <span class="pub-metric-badge">Dataset: <strong>4,083 annotated X-rays</strong></span>
-                        <span class="pub-metric-badge">Framework: <strong>PyTorch & Hugging Face</strong></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section -->
-        <section id="projects" class="section container">
-            <div class="fade-in">
-                <span class="section-tag">// System Implementations</span>
-                <h3 class="section-title">Featured Systems</h3>
-                <p class="section-desc">Industrial and experimental software systems engineered for efficiency, concurrency, and real-world deployment.</p>
-            </div>
-            
-            <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-card fade-in">
-                    <div class="project-top">
-                        <div class="project-header">
-                            <h4 class="project-title">MIST-ER</h4>
-                            <span class="project-badge">Deep Learning Architect</span>
-                        </div>
-                        <p class="project-desc">
-                            A multimodal temporal emotion recognition architecture processing high-frequency audio, video, and text streams concurrently to perform micro-expression classification.
-                        </p>
-                        <ul class="project-details-list">
-                            <li>Achieved 54% categorical accuracy on the highly challenging and noisy MESC dataset.</li>
-                            <li>Designed a bidirectional attention synchronization layer matching video and audio frames in time.</li>
-                            <li>Implemented parameter quantization, allowing real-time deployment on edge devices.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="project-tech">
-                            <span>PyTorch</span>
-                            <span>Multimodal Fusion</span>
-                            <span>Attention Layers</span>
-                            <span>Edge Optimization</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/iam-ajmunna" target="_blank" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                Repository
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card fade-in">
-                    <div class="project-top">
-                        <div class="project-header">
-                            <h4 class="project-title">Foil Stamping Inspection</h4>
-                            <span class="project-badge">System Architect</span>
-                        </div>
-                        <p class="project-desc">
-                            A production-ready industrial automation computer vision system designed to inspect foil stamping lines for high-throughput manufacturing facilities.
-                        </p>
-                        <ul class="project-details-list">
-                            <li>Designed high-performance backend pipelines using Python and multithreaded OpenCV frameworks.</li>
-                            <li>Optimized algorithms to handle sub-millisecond inspection cycles with extreme constraint boundaries.</li>
-                            <li>Deployed on client site manufacturing lines, improving structural inspection defect rates.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>OpenCV</span>
-                            <span>Multithreading</span>
-                            <span>Industrial Automation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/iam-ajmunna" target="_blank" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                Repository
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section container">
-            <div class="contact-container">
-                <div class="contact-info-panel fade-in">
-                    <div>
-                        <span class="section-tag">// Secure Linkage</span>
-                        <h3 class="contact-headline">Establish Contact</h3>
-                        <p class="contact-tagline">
-                            I am open to discuss engineering roles, research collaborations, or technical architecture challenges. Reach out via direct email or professional networks.
-                        </p>
-                    </div>
-                    
-                    <div class="contact-methods">
-                        <!-- Email -->
-                        <a href="mailto:iam.ajmunna@gmail.com" class="contact-method-card" aria-label="Send email to Assaduzzaman Munna">
-                            <div class="contact-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">Direct Mail</span>
-                                <span class="contact-method-val">iam.ajmunna@gmail.com</span>
-                            </div>
-                        </a>
-
-                        <!-- LinkedIn -->
-                        <a href="https://linkedin.com/in/iamajmunna" target="_blank" class="contact-method-card" aria-label="Assaduzzaman Munna LinkedIn Profile">
-                            <div class="contact-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">LinkedIn</span>
-                                <span class="contact-method-val">linkedin.com/in/iamajmunna</span>
-                            </div>
-                        </a>
-
-                        <!-- GitHub -->
-                        <a href="https://github.com/iam-ajmunna" target="_blank" class="contact-method-card" aria-label="Assaduzzaman Munna GitHub Profile">
-                            <div class="contact-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">GitHub</span>
-                                <span class="contact-method-val">github.com/iam-ajmunna</span>
-                            </div>
-                        </a>
-
-                        <!-- Location -->
-                        <div class="contact-method-card">
-                            <div class="contact-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-7.36 16.76L12 22l7.36-5.24A10 10 0 0 0 12 2z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">Base Location</span>
-                                <span class="contact-method-val">Dhaka, Bangladesh</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form Panel -->
-                <div class="contact-form-panel fade-in">
-                    <div id="submit-success" class="submit-status-banner"></div>
-                    <div id="submit-error" class="submit-status-banner"></div>
-                    
-                    <form id="contact-form" class="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="form-name" class="form-label">IDENTIFIER / NAME</label>
-                            <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
-                            <span id="error-name" class="form-error-msg">Please enter a valid identifier.</span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="form-email" class="form-label">ROUTING ENDPOINT / EMAIL</label>
-                            <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
-                            <span id="error-email" class="form-error-msg">Please enter a valid routing email address.</span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="form-message" class="form-label">DATA PACKET / MESSAGE (MIN. 10 CHARS)</label>
-                            <textarea id="form-message" class="form-input" placeholder="Construct your message payload..." required></textarea>
-                            <span id="error-message" class="form-error-msg">Please input a message payload longer than 10 characters.</span>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary" style="justify-content: center; width: 100%; border-radius: 8px;">
-                            Establish Connection
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer container" role="contentinfo">
-        <div class="footer-content">
-            <span class="footer-copyright">&copy; 2026 Assaduzzaman Munna. Optimized for performance and readability.</span>
-            <div class="footer-links">
-                <a href="#about" class="footer-link">About</a>
-                <a href="#skills" class="footer-link">Skills</a>
-                <a href="#experience" class="footer-link">Experience</a>
-                <a href="#publications" class="footer-link">Research</a>
-                <a href="#projects" class="footer-link">Projects</a>
-            </div>
+      <!-- Project 2 -->
+      <div class="project-card fade-up" style="transition-delay:0.06s">
+        <div class="project-number">02</div>
+        <h3 class="project-title">Industrial Automation System — Foil Stamping Inspection</h3>
+        <p class="project-desc">
+          A deployment-ready computer vision system for real-time monitoring of industrial manufacturing lines. Built for clients requiring high-throughput inspection with near-zero tolerance for defect misses and minimal added latency.
+        </p>
+        <p class="project-desc">
+          Engineered the complete backend inspection logic using Python and OpenCV to process high-speed stamping streams at production rates, detecting foil misalignment, coverage gaps, and print defects in real-time.
+        </p>
+        <div class="project-tags" style="margin-top:auto">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">OpenCV</span>
+          <span class="project-tag">Computer Vision</span>
+          <span class="project-tag">Industrial AI</span>
+          <span class="project-tag">Real-time Systems</span>
         </div>
-    </footer>
+        <div class="project-links">
+          <span class="project-link" style="cursor:default;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            System Architect &amp; Lead Engineer
+          </span>
+        </div>
+      </div>
 
-    <script src="script.js" defer></script>
+      <!-- Project 3 -->
+      <div class="project-card fade-up" style="transition-delay:0.12s">
+        <div class="project-number">03</div>
+        <div class="project-metric">🏆 99.80% Test Accuracy</div>
+        <h3 class="project-title">Hybrid CNN–MobileViT for Kidney Stone Detection in CT Scans</h3>
+        <p class="project-desc">
+          A hybrid student model combining MobileViT-Tiny and a CNN, trained via Knowledge Distillation from a ConvNeXt-Tiny teacher. The result: a model 18.5× smaller that retains 99.80% diagnostic accuracy on renal calculi CT imaging.
+        </p>
+        <p class="project-desc">
+          Trained in just 9 minutes on an NVIDIA T4 GPU — proving that cutting-edge medical AI doesn't require cutting-edge compute. Currently under peer review at SPICSCON 2026.
+        </p>
+        <div class="project-tags" style="margin-top:auto">
+          <span class="project-tag">Knowledge Distillation</span>
+          <span class="project-tag">MobileViT</span>
+          <span class="project-tag">Medical Imaging</span>
+          <span class="project-tag">Edge AI</span>
+          <span class="project-tag">NVIDIA T4</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link" style="cursor:default;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Under Review · SPICSCON 2026
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PUBLICATIONS
+════════════════════════════════════════════════════ -->
+<section id="publications">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Research</div>
+      <h2 class="section-title">Published &amp;<br>peer-reviewed work</h2>
+      <p class="section-sub">Academic contributions advancing AI applications in healthcare and affective computing.</p>
+    </div>
+
+    <div class="pub-list">
+
+      <!-- Paper 1 -->
+      <article class="pub-card fade-up">
+        <div class="pub-year-badge">
+          <div class="pub-year">2026</div>
+          <div class="pub-venue-short">IEEE</div>
+        </div>
+        <div>
+          <div class="pub-status published">
+            <span class="pub-status-dot" aria-hidden="true"></span>
+            Published · IEEE SATC 2026
+          </div>
+          <h3 class="pub-title">Bone Fracture Detection Using Vision Transformers: A Comparative Analysis of the Pooling-based Vision Transformer (PiT) and the Causal Transformer (CaFormer) Models</h3>
+          <p class="pub-authors">Atikul Islam Munna, Md. Ibrahim Khalil, <strong>Assaduzzaman Munna</strong>, et al.</p>
+          <p class="pub-venue">2026 IEEE 2nd International Conference on Secure IoT, Assured and Trusted Computing (SATC), Houston, TX, USA · DOI: 10.1109/SATC69565.2026.11542322</p>
+          <div class="pub-highlights">
+            <span class="pub-highlight">97.51% Test Accuracy</span>
+            <span class="pub-highlight">4,083 X-ray Images</span>
+            <span class="pub-highlight">PiT vs CaFormer</span>
+            <span class="pub-highlight">Medical Imaging</span>
+            <span class="pub-highlight">ViT Benchmarking</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Paper 2 -->
+      <article class="pub-card fade-up" style="transition-delay:0.08s">
+        <div class="pub-year-badge">
+          <div class="pub-year">2026</div>
+          <div class="pub-venue-short">Review</div>
+        </div>
+        <div>
+          <div class="pub-status review">
+            <span class="pub-status-dot" aria-hidden="true"></span>
+            Under Review · SPICSCON 2026
+          </div>
+          <h3 class="pub-title">Hybrid CNN–MobileViT Model with Knowledge Distillation for Efficient Renal Calculi Detection in CT Images</h3>
+          <p class="pub-authors"><strong>Assaduzzaman Munna</strong>, Mushfika Hossain, Anonto Bormon, Riasat Khan</p>
+          <p class="pub-venue">Submitted to SPICSCON 2026 — Currently under peer review</p>
+          <div class="pub-highlights">
+            <span class="pub-highlight">99.80% Accuracy</span>
+            <span class="pub-highlight">18.5× Compression</span>
+            <span class="pub-highlight">9-min Training</span>
+            <span class="pub-highlight">NVIDIA T4</span>
+            <span class="pub-highlight">Edge-Ready</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════════════════ -->
+<section id="education">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Education</div>
+      <h2 class="section-title">Academic<br>foundation</h2>
+    </div>
+
+    <div class="edu-card fade-up">
+      <div class="edu-icon" aria-hidden="true">🎓</div>
+      <div>
+        <div class="edu-degree">Bachelor of Science in Computer Science & Engineering</div>
+        <div class="edu-institution">North South University</div>
+        <div class="edu-field">Department of Electrical &amp; Computer Engineering &nbsp;·&nbsp; Dhaka, Bangladesh</div>
+      </div>
+      <div class="edu-stats">
+        <div class="edu-gpa" aria-label="GPA: 3.75">3.75</div>
+        <div class="edu-gpa-label">GPA / 4.00</div>
+        <div class="edu-duration">2022 – May 2026</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CERTIFICATIONS & ACHIEVEMENTS
+════════════════════════════════════════════════════ -->
+<section id="certifications">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Achievements</div>
+      <h2 class="section-title">Recognition &amp;<br>selective programs</h2>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card fade-up">
+        <div class="cert-icon" aria-hidden="true">🇯🇵</div>
+        <div>
+          <div class="cert-issuer">Chowa Giken · AI Samurai Japan</div>
+          <div class="cert-name">Nippon AI Dojo 2025 — Selected Participant</div>
+          <div class="cert-date">Sep 2025 – Jan 2026 · Competitive International Selection</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-up" style="transition-delay:0.06s">
+        <div class="cert-icon" aria-hidden="true">📄</div>
+        <div>
+          <div class="cert-issuer">IEEE · SATC 2026 Conference</div>
+          <div class="cert-name">Published Research — IEEE SATC, Houston TX</div>
+          <div class="cert-date">2026 · DOI: 10.1109/SATC69565.2026.11542322</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-up" style="transition-delay:0.12s">
+        <div class="cert-icon" aria-hidden="true">🏛️</div>
+        <div>
+          <div class="cert-issuer">North South University</div>
+          <div class="cert-name">Undergraduate Teaching Assistant — ECE Department</div>
+          <div class="cert-date">Jun 2025 – Present · Selected by Faculty</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">Ready to build<br>something great?</h2>
+      <p class="section-sub">Whether you're hiring, collaborating on research, or just want to talk AI — my inbox is always open.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Left: info -->
+      <div class="fade-up">
+        <p class="contact-intro">
+          I'm currently <strong>open to full-time AI/ML engineering roles, research collaborations, and internships</strong> — ideally starting around or after my May 2026 graduation. I bring both research depth and practical engineering experience, which is a combination that's genuinely rare at this stage.
+        </p>
+
+        <div class="contact-info-list">
+          <a href="mailto:iam.ajmunna@gmail.com" class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">✉️</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">iam.ajmunna@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/iamajmunna" target="_blank" rel="noopener" class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">💼</div>
+            <div>
+              <div class="contact-info-label">LinkedIn</div>
+              <div class="contact-info-value">linkedin.com/in/iamajmunna</div>
+            </div>
+          </a>
+          <a href="https://github.com/iam-ajmunna" target="_blank" rel="noopener" class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--muted)"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">GitHub</div>
+              <div class="contact-info-value">github.com/iam-ajmunna</div>
+            </div>
+          </a>
+          <div class="contact-info-item" style="cursor:default; pointer-events:none;">
+            <div class="contact-info-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-value">Dhaka, Bangladesh &nbsp;·&nbsp; Open to Remote &amp; Relocation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="fade-up" style="transition-delay:0.12s">
+        <div class="contact-form-wrap">
+          <div class="contact-form-heading">Send a message</div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="contactName">Name</label>
+            <input type="text" class="contact-form-input" id="contactName" placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="contactEmail">Email</label>
+            <input type="email" class="contact-form-input" id="contactEmail" placeholder="your@email.com" autocomplete="email">
+          </div>
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="contactMessage">Message</label>
+            <textarea class="contact-form-textarea" id="contactMessage" placeholder="Tell me about the role, project, or collaboration…"></textarea>
+          </div>
+
+          <button class="contact-form-btn" id="contactBtn" onclick="handleContactForm()">
+            Send Message →
+          </button>
+          <div class="contact-form-success" id="contactSuccess">
+            ✓ Opening your email client — message is pre-filled
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Assaduzzaman Munna · Built with precision, deployed with intent.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://linkedin.com/in/iamajmunna" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/iam-ajmunna" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:iam.ajmunna@gmail.com">Email</a>
+        <a href="Assaduzzaman_Munna_CV.pdf" download>CV</a>
+      </nav>
+      <button class="footer-back-top" id="backToTop" aria-label="Back to top">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+        Top
+      </button>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── Script ── -->
+<script src="script.js"></script>
 </body>
 </html>
