@@ -218,7 +218,7 @@
 
         <p>My work lives at the intersection of <strong>deep learning research and deployment reality</strong>. I don't just build models that score well on benchmarks — I build ones constrained by edge hardware, hospital imaging workflows, and factory-floor latency requirements.</p>
 
-        <p>I was <strong>competitively selected for Nippon AI Dojo 2025</strong> by Chowa Giken and AI Samurai Japan — working directly under Japanese AI industry mentors on real-world AI engineering problems. Currently, I serve as a <strong>Junior AI Engineer at The Data Island</strong> while also mentoring undergraduates as a <strong>Teaching Assistant</strong> in NSU's ECE Department.</p>
+        <p>I was <strong>competitively selected for Nippon AI Dojo 2025</strong> by Chowa Giken and AI Samurai Japan — working directly under Japanese AI industry mentors on real-world AI engineering problems. Currently, I serve as an <strong>AI Engineer at The Data Island</strong> while also mentoring undergraduates as a <strong>Teaching Assistant</strong> in NSU's ECE Department.</p>
 
         <p>Whether I'm designing cross-modal attention mechanisms, compressing a ConvNeXt teacher model by <strong>18.5× without accuracy loss</strong>, or walking a junior through backpropagation at 10 PM — I bring the same standard: <strong>precise, principled, and impactful.</strong></p>
 
@@ -382,7 +382,7 @@
         <div class="exp-card">
           <div class="exp-card-header">
             <span class="exp-role">
-              Junior AI Engineer
+              AI Engineer
               <span class="exp-current-tag">Current</span>
             </span>
             <span class="exp-period">Apr 2026 – Present</span>
@@ -446,72 +446,80 @@
     <div class="fade-up">
       <div class="section-eyebrow">Work</div>
       <h2 class="section-title">Projects that<br>solve real problems</h2>
-      <p class="section-sub">From micro-emotion recognition on edge devices to automated industrial inspection — built with research rigour and production intent.</p>
+      <p class="section-sub">From local LLM serv-agents and embedded systems to enterprise vision AI pipelines — built with production rigor.</p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="project-categories fade-up" style="transition-delay:0.06s">
+      <button class="category-btn active" data-category="all">All Projects</button>
+      <button class="category-btn" data-category="industry">Industry AI</button>
+      <button class="category-btn" data-category="research">Research &amp; GenAI</button>
+      <button class="category-btn" data-category="edge-software">Edge &amp; Software</button>
     </div>
 
     <div class="projects-grid">
 
-      <!-- FEATURED: MiST-ER -->
-      <div class="project-card featured fade-up">
-        <div>
-          <div class="project-number">FLAGSHIP PROJECT · ONGOING</div>
-          <div class="project-metric">🧪 Deep Learning Research</div>
-          <h3 class="project-title">MiST-ER: Micro-emotion Selective Temporal Emotion Recognition</h3>
-          <p class="project-desc">
-            A lightweight multimodal AI pipeline combining Audio, Video, and Text streams for micro-emotion classification — one of the hardest open problems in affective computing.
-          </p>
-          <p class="project-desc">
-            The core challenge: genuine micro-expressions last 40–200 ms and are suppressed by social context, causing most systems to classify noise rather than emotion. MiST-ER isolates these frames using a custom cross-modal attention mechanism and bidirectional fusion layer, achieving 54% accuracy on the MESC benchmark while maintaining edge deployment viability.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">PyTorch</span>
-            <span class="project-tag">Multimodal AI</span>
-            <span class="project-tag">Transformers</span>
-            <span class="project-tag">Temporal Attention</span>
-            <span class="project-tag">Edge Deployment</span>
-            <span class="project-tag">NLP</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/iam-ajmunna" target="_blank" rel="noopener" class="project-link">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
+      <!-- ── INDUSTRY AI CATEGORY ── -->
+
+      <!-- Project 1: Enterprise Video Analytics (Confidential) -->
+      <div class="project-card fade-up" data-category="industry">
+        <div class="project-number">01 · Company Project (Confidential)</div>
+        <div class="project-metric">⚡ Real-Time Multi-Stream</div>
+        <h3 class="project-title">Enterprise Edge Video Analytics Pipeline</h3>
+        <p class="project-desc">
+          A high-performance, multi-stream real-time face recognition and data processing pipeline built for industrial CCTV facility networks under The Data Island. Resolves frame throughput latency using custom parsing libraries and GStreamer connections.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">C++</span>
+          <span class="project-tag">NVIDIA DeepStream 7.0</span>
+          <span class="project-tag">Triton Inference Server</span>
+          <span class="project-tag">TensorRT</span>
+          <span class="project-tag">FAISS DB</span>
         </div>
-        <div>
-          <div class="project-tech-box">
-            <div class="project-tech-box-title">Architecture Highlights</div>
-            <ul class="project-tech-list">
-              <li>Custom cross-modal attention across Audio, Video & Text modalities simultaneously</li>
-              <li>Bidirectional temporal fusion layer to isolate emotionally relevant frames and suppress noise</li>
-              <li>Optimised for resource-constrained edge deployment — minimal latency overhead vs accuracy</li>
-              <li>Benchmarked on MESC dataset — the standard for micro-expression recognition</li>
-            </ul>
-          </div>
-          <div style="margin-top:1.25rem; padding:1rem; background:rgba(59,130,246,0.04); border:1px solid rgba(59,130,246,0.1); border-radius:10px;">
-            <div style="font-size:0.72rem; font-weight:600; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.5rem;">Role</div>
-            <div style="font-size:0.87rem; color:var(--text); font-weight:500;">Deep Learning Architect</div>
-            <div style="font-size:0.78rem; color:var(--muted); margin-top:0.25rem; line-height:1.5;">Responsible for model architecture, fusion strategy, and deployment optimisation</div>
-          </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna/ha_meem_ai_surveillance" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card fade-up" style="transition-delay:0.06s">
-        <div class="project-number">02</div>
-        <h3 class="project-title">Industrial Automation System — Foil Stamping Inspection</h3>
+      <!-- Project 2: Spatial-Temporal Hazard Detection (Confidential) -->
+      <div class="project-card fade-up" data-category="industry">
+        <div class="project-number">02 · Company Project (Confidential)</div>
+        <div class="project-metric">🔬 TPT Verification Logic</div>
+        <h3 class="project-title">Spatial-Temporal Hazard Detection System</h3>
         <p class="project-desc">
-          A deployment-ready computer vision system for real-time monitoring of industrial manufacturing lines. Built for clients requiring high-throughput inspection with near-zero tolerance for defect misses and minimal added latency.
+          An industrial-grade hazard surveillance core library built for Radar-Eye. Combines spatial object detection with a custom sliding-window Temporal Persistence Tracking (TPT) and feature fusion models to suppress false alarms on site cameras.
         </p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">YOLOv8</span>
+          <span class="project-tag">BYTETracker</span>
+          <span class="project-tag">Optical Flow</span>
+          <span class="project-tag">PyTest</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna/Real-Time-Spatial-Temporal-Fire-and-Smoke-Detection" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: Industrial Automation System - Foil Stamping Inspection -->
+      <div class="project-card fade-up" data-category="industry">
+        <div class="project-number">03 · Company Project (Confidential)</div>
+        <div class="project-metric">👁️ Defect Detection CV</div>
+        <h3 class="project-title">Industrial Foil Stamping Visual Inspection System</h3>
         <p class="project-desc">
-          Engineered the complete backend inspection logic using Python and OpenCV to process high-speed stamping streams at production rates, detecting foil misalignment, coverage gaps, and print defects in real-time.
+          A deployment-ready computer vision inspection system for real-time monitoring of industrial printing lines. Processes high-speed stamping streams using image alignment and segmentation to detect printing defect patterns with near-zero latency overhead.
         </p>
-        <div class="project-tags" style="margin-top:auto">
+        <div class="project-tags">
           <span class="project-tag">Python</span>
           <span class="project-tag">OpenCV</span>
           <span class="project-tag">Computer Vision</span>
-          <span class="project-tag">Industrial AI</span>
-          <span class="project-tag">Real-time Systems</span>
+          <span class="project-tag">Real-Time Systems</span>
         </div>
         <div class="project-links">
           <span class="project-link" style="cursor:default;">
@@ -521,29 +529,144 @@
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card fade-up" style="transition-delay:0.12s">
-        <div class="project-number">03</div>
+      <!-- ── RESEARCH & GENAI CATEGORY ── -->
+
+      <!-- Project 4: MiST-ER (Existing featured) -->
+      <div class="project-card fade-up" data-category="research">
+        <div class="project-number">04 · Academic Research</div>
+        <div class="project-metric">🧪 Multimodal AI Research</div>
+        <h3 class="project-title">MiST-ER: Micro-emotion Temporal Emotion Recognition</h3>
+        <p class="project-desc">
+          A lightweight multimodal AI pipeline combining Audio, Video, and Text streams for micro-expression classification. Resolves frame-level noise and contextual bias using a custom cross-modal attention layer and temporal fusion networks.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">PyTorch</span>
+          <span class="project-tag">Multimodal AI</span>
+          <span class="project-tag">Transformers</span>
+          <span class="project-tag">NLP</span>
+          <span class="project-tag">Edge Deployment</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 5: Hybrid CNN–MobileViT (Existing 03) -->
+      <div class="project-card fade-up" data-category="research">
+        <div class="project-number">05 · Academic Research</div>
         <div class="project-metric">🏆 99.80% Test Accuracy</div>
-        <h3 class="project-title">Hybrid CNN–MobileViT for Kidney Stone Detection in CT Scans</h3>
+        <h3 class="project-title">Hybrid CNN–MobileViT for Medical CT Diagnostics</h3>
         <p class="project-desc">
-          A hybrid student model combining MobileViT-Tiny and a CNN, trained via Knowledge Distillation from a ConvNeXt-Tiny teacher. The result: a model 18.5× smaller that retains 99.80% diagnostic accuracy on renal calculi CT imaging.
+          An optimized hybrid model combining MobileViT and a CNN. Trained via Knowledge Distillation from a ConvNeXt-Tiny teacher, achieving an 18.5× parameter compression ratio while preserving diagnostic accuracy for renal CT imaging.
         </p>
-        <p class="project-desc">
-          Trained in just 9 minutes on an NVIDIA T4 GPU — proving that cutting-edge medical AI doesn't require cutting-edge compute. Currently under peer review at SPICSCON 2026.
-        </p>
-        <div class="project-tags" style="margin-top:auto">
+        <div class="project-tags">
           <span class="project-tag">Knowledge Distillation</span>
           <span class="project-tag">MobileViT</span>
           <span class="project-tag">Medical Imaging</span>
           <span class="project-tag">Edge AI</span>
-          <span class="project-tag">NVIDIA T4</span>
         </div>
         <div class="project-links">
           <span class="project-link" style="cursor:default;">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Under Review · SPICSCON 2026
+            Under Review · STI 2026
           </span>
+        </div>
+      </div>
+
+      <!-- Project 6: Reasoning Pathways in Qwen3-4B -->
+      <div class="project-card fade-up" data-category="research">
+        <div class="project-number">06 · Academic Research</div>
+        <div class="project-metric">🧠 LLM Fine-Tuning</div>
+        <h3 class="project-title">Reasoning Pathways in Qwen3-4B</h3>
+        <p class="project-desc">
+          A comprehensive research project evaluating reasoning capabilities in compact LLMs. Applies Parameter-Efficient Fine-Tuning (PEFT) using LoRA to adapt Qwen3-4B for advanced QA performance while analyzing reasoning pathways.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">PyTorch</span>
+          <span class="project-tag">PEFT / LoRA</span>
+          <span class="project-tag">Transformers</span>
+          <span class="project-tag">Qwen3-4B</span>
+          <span class="project-tag">Chain-of-Thought</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna/Reasoning-Pathways-in-Qwen3-4B-LoRA-Optimization-for-Efficient-QA-Performance" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- ── EDGE & SOFTWARE CATEGORY ── -->
+
+      <!-- Project 7: Edge-LLM Autonomous Drone Simulator (New Agentic) -->
+      <div class="project-card fade-up" data-category="edge-software">
+        <div class="project-number">07 · Research &amp; Simulation</div>
+        <div class="project-metric">🤖 Agentic Autonomy</div>
+        <h3 class="project-title">Edge-LLM Autonomous Drone Simulator</h3>
+        <p class="project-desc">
+          A local AI pilot serving SmolLM2-1.7B-Instruct on a Raspberry Pi 5. Utilizes multiprocessing to bridge real-time 60Hz Pymunk physics with LLM decision inference, executing evasive maneuvers, auto-hover locks, and safety overrides based on live UDP telemetry.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">SmolLM2</span>
+          <span class="project-tag">Raspberry Pi 5</span>
+          <span class="project-tag">llama.cpp</span>
+          <span class="project-tag">Pymunk Physics</span>
+          <span class="project-tag">UDP Sockets</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna/edge-intelligence-benchmarking-and-simulation" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 8: Portable Cardiac Monitoring System -->
+      <div class="project-card fade-up" data-category="edge-software">
+        <div class="project-number">08 · Embedded Systems</div>
+        <div class="project-metric">🫀 Edge IoT / Biosignals</div>
+        <h3 class="project-title">Portable Cardiac Monitoring System</h3>
+        <p class="project-desc">
+          A compact hardware-software system designed using an STM32 microcontroller to monitor and display ECG signals, heart rate, and oxygen saturation levels. Integrates biosensing filters and displays real-time health data on a mobile dashboard.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Embedded C++</span>
+          <span class="project-tag">STM32F103</span>
+          <span class="project-tag">AD8232 ECG Sensor</span>
+          <span class="project-tag">MAX30102 PPG</span>
+          <span class="project-tag">OLED I2C</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna/Portable-Cardiac-Monitoring-System" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 9: MyPocket -->
+      <div class="project-card fade-up" data-category="edge-software">
+        <div class="project-number">09 · Mobile Application</div>
+        <div class="project-metric">📱 Mobile App Development</div>
+        <h3 class="project-title">MyPocket — Unified Digital Wallet</h3>
+        <p class="project-desc">
+          A mobile e-wallet application that consolidates payment details, transit passes, loyalty programs, tickets, and digitized identification documents. Features biometric options, real-time database sync, and background push notifications.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Flutter</span>
+          <span class="project-tag">Dart</span>
+          <span class="project-tag">Firebase Core/Auth</span>
+          <span class="project-tag">Cloud Firestore</span>
+          <span class="project-tag">Local Alerts</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/iam-ajmunna/MyPocket--A-Unified-Digital-Wallet" target="_blank" rel="noopener" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
 
@@ -599,11 +722,11 @@
         <div>
           <div class="pub-status review">
             <span class="pub-status-dot" aria-hidden="true"></span>
-            Under Review · SPICSCON 2026
+            Under Review · STI 2026
           </div>
           <h3 class="pub-title">Hybrid CNN–MobileViT Model with Knowledge Distillation for Efficient Renal Calculi Detection in CT Images</h3>
           <p class="pub-authors"><strong>Assaduzzaman Munna</strong>, Mushfika Hossain, Anonto Bormon, Riasat Khan</p>
-          <p class="pub-venue">Submitted to SPICSCON 2026 — Currently under peer review</p>
+          <p class="pub-venue">Submitted to IEEE STI 2026 — Currently under peer review</p>
           <div class="pub-highlights">
             <span class="pub-highlight">99.80% Accuracy</span>
             <span class="pub-highlight">18.5× Compression</span>

@@ -253,3 +253,30 @@ if (window.matchMedia('(pointer: fine)').matches) {
   document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
   document.addEventListener('mouseenter', () => { glow.style.opacity = '1'; });
 }
+
+/* ── PROJECTS CATEGORY FILTERING ── */
+const categoryButtons = document.querySelectorAll('.category-btn');
+const projectCards = document.querySelectorAll('#projects .project-card');
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('active')) return;
+
+    // Toggle active classes on tab buttons
+    categoryButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const selectedCategory = btn.getAttribute('data-category');
+
+    projectCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      const shouldShow = selectedCategory === 'all' || cardCategory === selectedCategory;
+
+      if (shouldShow) {
+        card.classList.remove('card-hidden');
+      } else {
+        card.classList.add('card-hidden');
+      }
+    });
+  });
+});
