@@ -190,7 +190,7 @@ const statsObserver = new IntersectionObserver((entries) => {
     if (e.isIntersecting) {
       const statEls = document.querySelectorAll('.hero-stat-value');
       const values  = [
-        { val: '3.75', suffix: '' },
+        { val: '3.74', suffix: '' },
         { val: '2',    suffix: '×' },
         { val: '99.8', suffix: '%' }
       ];
