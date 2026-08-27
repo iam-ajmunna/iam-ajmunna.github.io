@@ -327,6 +327,57 @@ nav.scrolled {
   padding: 96px clamp(1.5rem, 5vw, 4rem) 1.5rem;
   position: relative;
   overflow: hidden;
+  background:
+    radial-gradient(ellipse 85% 70% at 50% 35%, rgba(45, 12, 18, 0.5) 0%, rgba(22, 6, 10, 0.65) 50%, var(--bg) 88%),
+    linear-gradient(180deg, rgba(32, 8, 14, 0.35) 0%, var(--bg) 100%);
+}
+
+/* ── Hero Cinematic Background Media ── */
+.hero-bg-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg-gif {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(540px, 85vw);
+  height: min(440px, 65vh);
+  object-fit: contain;
+  opacity: 0.44;
+  filter: blur(1px) brightness(0.95) contrast(1.2);
+  mask-image: radial-gradient(ellipse 58% 52% at 50% 50%, black 25%, rgba(0, 0, 0, 0.5) 55%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 58% 52% at 50% 50%, black 25%, rgba(0, 0, 0, 0.5) 55%, transparent 75%);
+  pointer-events: none;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 65% at 50% 40%, rgba(20, 5, 8, 0.1) 0%, rgba(5, 5, 5, 0.55) 85%, var(--bg) 100%),
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.25) 0%, transparent 20%, transparent 80%, var(--bg) 100%);
+  pointer-events: none;
+}
+
+/* ── Deep Black Cinematic Vignette ── */
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, transparent 20%, rgba(5, 5, 5, 0.45) 58%, rgba(5, 5, 5, 0.94) 86%, #050505 100%),
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.85) 0%, transparent 15%, transparent 80%, #050505 100%),
+    linear-gradient(to right, rgba(5, 5, 5, 0.88) 0%, transparent 15%, transparent 85%, rgba(5, 5, 5, 0.88) 100%);
+  z-index: 1;
 }
 
 /* Ambient system topology background */
@@ -335,9 +386,9 @@ nav.scrolled {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(197, 22, 36, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 30%, rgba(197, 22, 36, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 50% 80%, rgba(197, 22, 36, 0.02) 0%, transparent 50%);
+    radial-gradient(circle at 50% 30%, rgba(95, 20, 32, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 20% 60%, rgba(70, 15, 24, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(70, 15, 24, 0.07) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
