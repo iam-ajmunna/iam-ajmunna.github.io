@@ -6,8 +6,8 @@
 
   <!-- ── SEO ── -->
   <title>Assaduzzaman Munna — AI/ML Engineer & Researcher</title>
-  <meta name="description" content="AI/ML Engineer and IEEE & Journal published/submitted researcher. Building scalable data pipelines, Vision Transformers, Agentic RAG, and edge AI systems.">
-  <meta name="keywords" content="AI Engineer, Machine Learning, Computer Vision, DeepStream, PyTorch, Transformers, Agentic RAG, LLMs, Bangladesh, NSU, Research">
+  <meta name="description" content="AI/ML Engineer and IEEE-published researcher. Building scalable deep learning pipelines, Vision Transformers, Agentic RAG, and edge-optimized intelligent systems.">
+  <meta name="keywords" content="AI Engineer, Machine Learning, Computer Vision, DeepStream, PyTorch, Transformers, Agentic RAG, LLMs, Edge AI, MLOps, Research">
   <meta name="author" content="Assaduzzaman Munna">
   <link rel="canonical" href="https://iam-ajmunna.github.io">
 
@@ -23,18 +23,21 @@
   <meta name="twitter:title"       content="Assaduzzaman Munna — AI/ML Engineer">
   <meta name="twitter:description" content="AI/ML Engineer & Researcher. Building scalable intelligent systems that work at scale.">
 
-  <!-- ── Favicon (inline SVG data-URI) ── -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233B82F6'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='white'>M</text></svg>">
+  <!-- ── Favicon ── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23C51624'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='white'>M</text></svg>">
 
   <!-- ── Fonts ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- ── Stylesheet ── -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- ═══════════════════════════════════════════════════
      NAVIGATION
@@ -58,33 +61,52 @@
 
 
 <!-- ═══════════════════════════════════════════════════
-     HERO
+     HERO — Cinematic, text-only
 ════════════════════════════════════════════════════ -->
 <section id="hero" aria-label="Introduction">
 
-  <!-- LEFT: Content -->
-  <div class="hero-content fade-up">
+  <div class="hero-content">
 
-    <div class="hero-badge">
-      <span class="hero-badge-dot" aria-hidden="true"></span>
-      Open to Opportunities
+    <!-- Top Row: Identity Pill + Separated Open to Opportunities Badge -->
+    <div class="hero-top-row blur-in">
+      <div class="hero-intro-pill">
+        <div class="hero-intro-avatar">
+          <img src="assets/images/Official.jpg" alt="Assaduzzaman Munna">
+        </div>
+        <div class="hero-intro-text">
+          <span class="hero-intro-name">Assaduzzaman Munna</span>
+          <span class="hero-intro-sep">·</span>
+          <span class="hero-intro-role">AI Engineer &amp; Researcher</span>
+        </div>
+      </div>
+
+      <div class="hero-status-pill">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        <span>Open to Opportunities</span>
+      </div>
     </div>
 
-    <h1 class="hero-name">
-      Assaduzzaman<br>
-      <span class="highlight">Munna</span>
+    <h1 class="hero-headline blur-in" style="transition-delay:0.12s">
+      I engineer<br>
+      <span class="accent">intelligence</span><br>
+      for the real world.
     </h1>
 
-    <p class="hero-title">AI/ML Engineer &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Builder</p>
+    <div class="hero-roles blur-in" style="transition-delay:0.24s">
+      <span class="hero-role">AI Engineer @ The Data Island</span>
+      <span class="hero-role">Nippon AI Dojo '25 (Japan)</span>
+      <span class="hero-role">IEEE Published Author</span>
+      <span class="hero-role">DeepStream &amp; TensorRT</span>
+      <span class="hero-role">Agentic RAG &amp; LLMs</span>
+    </div>
 
-    <p class="hero-description">
-      I build intelligent systems that bridge the gap between research papers and 
-      real-world deployment. IEEE&#8209;published and journal&#8209;submitted researcher, industry&#8209;trained AI engineer, 
-      and builder driven by one question: <em>how do we make AI actually work at scale?</em>
+    <p class="hero-description blur-in" style="transition-delay:0.36s">
+      Hi, I'm <strong>Assaduzzaman Munna</strong> — an AI Engineer at <strong>The Data Island</strong> and <strong>Nippon AI Dojo 2025</strong> Fellow (Chowa Giken, Japan).
+      I conduct peer-reviewed deep learning research and build scalable, real-time edge inference systems.
     </p>
 
-    <div class="hero-actions">
-      <a href="Assaduzzaman_Munna_CV.pdf" download class="btn-primary">
+    <div class="hero-actions blur-in" style="transition-delay:0.48s">
+      <a href="assets/docs/Assaduzzaman_Munna_CV.pdf" download class="btn-primary">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download CV
       </a>
@@ -94,54 +116,22 @@
       </a>
     </div>
 
-    <div class="hero-stats" aria-label="Key stats">
-      <div>
+    <div class="hero-stats blur-in" style="transition-delay:0.6s" aria-label="Key stats">
+      <div class="hero-stat-item">
         <div class="hero-stat-value" aria-label="GPA 3.74 out of 4">3.74</div>
         <div class="hero-stat-label">CGPA / 4.00</div>
       </div>
-      <div>
+      <div class="hero-stat-item">
         <div class="hero-stat-value">3×</div>
         <div class="hero-stat-label">Publications</div>
       </div>
-      <div>
+      <div class="hero-stat-item">
         <div class="hero-stat-value">99.8%</div>
         <div class="hero-stat-label">Model Accuracy</div>
       </div>
     </div>
 
   </div><!-- /hero-content -->
-
-  <!-- RIGHT: Photo -->
-  <div class="hero-image-wrap fade-up" style="transition-delay:0.15s">
-    <div class="hero-image-glow" aria-hidden="true"></div>
-    <div class="hero-image-frame">
-      <img
-        src="hero-profile-enhanced.png"
-        alt="Assaduzzaman Munna — AI/ML Engineer"
-        loading="eager"
-        fetchpriority="high"
-      >
-      <!-- floating availability badge -->
-      <div class="hero-image-tag" aria-label="Currently available">
-        <span class="hero-image-tag-dot" aria-hidden="true"></span>
-        Available
-      </div>
-      <!-- floating university badge -->
-      <div class="hero-image-badge">
-        <div class="hero-image-badge-icon" aria-hidden="true">🏛️</div>
-        <div class="hero-image-badge-text">
-          <strong>North South University</strong>
-          <span>BSc CSE &nbsp;·&nbsp; 2022–2026</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- scroll cue -->
-  <div class="scroll-hint" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="scroll-hint-line"></div>
-  </div>
 
 </section>
 
@@ -161,11 +151,11 @@
     <span class="marquee-item">Knowledge Distillation</span><span class="marquee-sep"></span>
     <span class="marquee-item">Google Cloud (GCP)</span><span class="marquee-sep"></span>
     <span class="marquee-item">NVIDIA DeepStream</span><span class="marquee-sep"></span>
-    <span class="marquee-item">MLOps &amp; Docker</span><span class="marquee-sep"></span>
+    <span class="marquee-item">TensorRT</span><span class="marquee-sep"></span>
     <span class="marquee-item">OpenCV</span><span class="marquee-sep"></span>
     <span class="marquee-item">React.js &amp; Next.js</span><span class="marquee-sep"></span>
     <span class="marquee-item">Flutter (Dart)</span><span class="marquee-sep"></span>
-    <span class="marquee-item">IEEE &amp; Journal Published</span><span class="marquee-sep"></span>
+    <span class="marquee-item">IEEE Published</span><span class="marquee-sep"></span>
     <span class="marquee-item">Python &amp; C++</span><span class="marquee-sep"></span>
     <!-- duplicate for seamless loop -->
     <span class="marquee-item">PyTorch</span><span class="marquee-sep"></span>
@@ -178,14 +168,47 @@
     <span class="marquee-item">Knowledge Distillation</span><span class="marquee-sep"></span>
     <span class="marquee-item">Google Cloud (GCP)</span><span class="marquee-sep"></span>
     <span class="marquee-item">NVIDIA DeepStream</span><span class="marquee-sep"></span>
-    <span class="marquee-item">MLOps &amp; Docker</span><span class="marquee-sep"></span>
+    <span class="marquee-item">TensorRT</span><span class="marquee-sep"></span>
     <span class="marquee-item">OpenCV</span><span class="marquee-sep"></span>
     <span class="marquee-item">React.js &amp; Next.js</span><span class="marquee-sep"></span>
     <span class="marquee-item">Flutter (Dart)</span><span class="marquee-sep"></span>
-    <span class="marquee-item">IEEE &amp; Journal Published</span><span class="marquee-sep"></span>
+    <span class="marquee-item">IEEE Published</span><span class="marquee-sep"></span>
     <span class="marquee-item">Python &amp; C++</span><span class="marquee-sep"></span>
   </div>
 </div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ENGINEERING PHILOSOPHY
+════════════════════════════════════════════════════ -->
+<section id="philosophy">
+  <div class="container">
+    <div class="philosophy-content">
+
+      <div class="section-eyebrow fade-up">Philosophy</div>
+
+      <div class="philosophy-quote fade-up" id="philosophyQuote" style="transition-delay:0.1s">
+        The work isn't done when the model converges. It's done when the system <em>ships</em>, survives the real world, and keeps running — no matter what breaks along the way.
+      </div>
+
+      <div class="philosophy-principles">
+        <div class="philosophy-principle fade-up" style="transition-delay:0.15s">
+          <div class="philosophy-principle-number">01</div>
+          <div class="philosophy-principle-text"><strong>Relentless execution.</strong> Ideas are everywhere. Shipping is rare. I don't stop until it's deployed.</div>
+        </div>
+        <div class="philosophy-principle fade-up" style="transition-delay:0.25s">
+          <div class="philosophy-principle-number">02</div>
+          <div class="philosophy-principle-text"><strong>Failure is feedback.</strong> Every broken pipeline, every failed experiment — is a step closer to the system that works.</div>
+        </div>
+        <div class="philosophy-principle fade-up" style="transition-delay:0.35s">
+          <div class="philosophy-principle-number">03</div>
+          <div class="philosophy-principle-text"><strong>Build what matters.</strong> Intelligence becomes meaningful only when it's engineered into reliable, real-world systems.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- ═══════════════════════════════════════════════════
@@ -195,13 +218,13 @@
   <div class="container">
     <div class="about-grid">
 
-      <!-- Visual -->
+      <!-- Visual — photo moved here from hero -->
       <div class="about-visual fade-up">
         <div class="about-photo-stack">
           <div class="about-photo-main">
             <img
-              src="about-profile-enhanced.webp"
-              alt="Assaduzzaman Munna — professional portrait"
+              src="assets/images/hero-profile-enhanced.png"
+              alt="Assaduzzaman Munna — AI/ML Engineer"
               loading="lazy"
             >
           </div>
@@ -218,38 +241,39 @@
         <div class="section-eyebrow">About Me</div>
         <h2 class="section-title">Researcher.<br>Engineer.<br>Builder.</h2>
 
-        <p>I'm Assaduzzaman Munna — a final-year CSE student at <strong>North South University</strong> with a rare combination: peer-reviewed AI research published at IEEE and under review in major international journals, paired with hands-on production engineering experience.</p>
+        <p>I'm Assaduzzaman Munna — a CSE graduate from <strong>North South University</strong> with a rare combination: peer-reviewed AI research published at IEEE and under review in major international journals, paired with hands-on production engineering experience.</p>
 
         <p>My work lives at the intersection of <strong>deep learning research and deployment reality</strong>. I don't just build models that score well on benchmarks — I build systems constrained by edge hardware, hospital imaging workflows, enterprise LLM architectures, and factory-floor latency requirements.</p>
 
         <p>I was <strong>competitively selected for Nippon AI Dojo 2025</strong> by Chowa Giken and AI Samurai Japan — working directly under Japanese AI industry mentors on real-world AI engineering problems. Currently, I serve as an <strong>AI Engineer at The Data Island</strong> while also mentoring undergraduates as a <strong>Teaching Assistant</strong> in NSU's ECE Department.</p>
 
         <p>Whether I'm designing shared-private cross-modal attention mechanisms, compressing a ConvNeXt teacher model by <strong>18.5× without accuracy loss</strong>, or developing agentic RAG architectures — I bring the same standard: <strong>precise, principled, and impactful.</strong></p>
-
-        <div class="about-highlights">
-          <div class="about-highlight-item">
-            <div class="about-highlight-icon">🔬</div>
-            <div class="about-highlight-title">3× Research Papers</div>
-            <div class="about-highlight-desc">IEEE SATC 2026 (Published), Alexandria Eng. Journal &amp; SPICSCON 2026 (Under Review)</div>
-          </div>
-          <div class="about-highlight-item">
-            <div class="about-highlight-icon">🏭</div>
-            <div class="about-highlight-title">Industry Trained</div>
-            <div class="about-highlight-desc">Production AI at The Data Island + Japan AI Dojo mentorship</div>
-          </div>
-          <div class="about-highlight-item">
-            <div class="about-highlight-icon">🎓</div>
-            <div class="about-highlight-title">Top Academic</div>
-            <div class="about-highlight-desc">3.74/4.00 CGPA · Undergraduate Teaching Assistant, NSU ECE Dept.</div>
-          </div>
-          <div class="about-highlight-item">
-            <div class="about-highlight-icon">⚡</div>
-            <div class="about-highlight-title">Edge &amp; GenAI Mindset</div>
-            <div class="about-highlight-desc">99.80% accuracy · 18.5× compression · Agentic RAG &amp; DeepStream pipelines</div>
-          </div>
-        </div>
       </div>
 
+    </div>
+
+    <!-- 4 highlight cards in a single row across the full container -->
+    <div class="about-highlights fade-up" style="transition-delay:0.15s">
+      <div class="about-highlight-item">
+        <div class="about-highlight-icon">🔬</div>
+        <div class="about-highlight-title">3× Research Papers</div>
+        <div class="about-highlight-desc">IEEE SATC 2026 (Published), Alexandria Eng. Journal &amp; SPICSCON 2026 (Under Review)</div>
+      </div>
+      <div class="about-highlight-item">
+        <div class="about-highlight-icon">🏭</div>
+        <div class="about-highlight-title">Industry Trained</div>
+        <div class="about-highlight-desc">Production AI at The Data Island + Japan AI Dojo mentorship</div>
+      </div>
+      <div class="about-highlight-item">
+        <div class="about-highlight-icon">🎓</div>
+        <div class="about-highlight-title">Top Academic</div>
+        <div class="about-highlight-desc">3.74/4.00 CGPA · Undergraduate Teaching Assistant, NSU ECE Dept.</div>
+      </div>
+      <div class="about-highlight-item">
+        <div class="about-highlight-icon">⚡</div>
+        <div class="about-highlight-title">Edge &amp; GenAI Mindset</div>
+        <div class="about-highlight-desc">99.80% accuracy · 18.5× compression · Agentic RAG &amp; DeepStream pipelines</div>
+      </div>
     </div>
   </div>
 </section>
@@ -271,7 +295,7 @@
 
       <div class="skill-card fade-up">
         <div class="skill-card-header">
-          <div class="skill-card-icon icon-blue" aria-hidden="true">🧠</div>
+          <div class="skill-card-icon icon-red" aria-hidden="true">🧠</div>
           <div class="skill-card-title">AI, ML &amp; Computer Vision</div>
         </div>
         <div class="skill-tags">
@@ -288,7 +312,7 @@
 
       <div class="skill-card fade-up" style="transition-delay:0.05s">
         <div class="skill-card-header">
-          <div class="skill-card-icon icon-purple" aria-hidden="true">🤖</div>
+          <div class="skill-card-icon icon-crimson" aria-hidden="true">🤖</div>
           <div class="skill-card-title">Generative AI &amp; NLP</div>
         </div>
         <div class="skill-tags">
@@ -304,7 +328,7 @@
 
       <div class="skill-card fade-up" style="transition-delay:0.1s">
         <div class="skill-card-header">
-          <div class="skill-card-icon icon-orange" aria-hidden="true">☁️</div>
+          <div class="skill-card-icon icon-warm" aria-hidden="true">☁️</div>
           <div class="skill-card-title">Cloud, DevOps &amp; Data</div>
         </div>
         <div class="skill-tags">
@@ -322,7 +346,7 @@
 
       <div class="skill-card fade-up" style="transition-delay:0.15s">
         <div class="skill-card-header">
-          <div class="skill-card-icon icon-green" aria-hidden="true">💻</div>
+          <div class="skill-card-icon icon-muted" aria-hidden="true">💻</div>
           <div class="skill-card-title">Software Engineering &amp; Languages</div>
         </div>
         <div class="skill-tags">
@@ -341,7 +365,7 @@
 
       <div class="skill-card fade-up" style="transition-delay:0.2s">
         <div class="skill-card-header">
-          <div class="skill-card-icon icon-teal" aria-hidden="true">⚡</div>
+          <div class="skill-card-icon icon-dark" aria-hidden="true">⚡</div>
           <div class="skill-card-title">Edge AI &amp; High-Throughput</div>
         </div>
         <div class="skill-tags">
@@ -356,7 +380,7 @@
 
       <div class="skill-card fade-up" style="transition-delay:0.25s">
         <div class="skill-card-header">
-          <div class="skill-card-icon icon-pink" aria-hidden="true">📐</div>
+          <div class="skill-card-icon icon-accent" aria-hidden="true">📐</div>
           <div class="skill-card-title">Research &amp; Methodologies</div>
         </div>
         <div class="skill-tags">
@@ -691,6 +715,221 @@
 
 
 <!-- ═══════════════════════════════════════════════════
+     SYSTEMS / PRODUCTION ENGINEERING & GITHUB WORKFLOW
+════════════════════════════════════════════════════ -->
+<section id="systems">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Systems Thinking &amp; Architecture</div>
+      <h2 class="section-title">How I engineer &amp;<br>ship production systems</h2>
+      <p class="section-sub">From disciplined Git branch lifecycles and CI/CD quality gates to high-throughput real-time AI inference pipelines.</p>
+    </div>
+
+    <!-- Unified Systems Card (Single View) -->
+    <div class="systems-unified-card fade-up" style="transition-delay:0.08s">
+
+      <!-- ── TRACK 1: GITHUB SDLC & CI/CD PIPELINE ── -->
+      <div class="pipeline-track">
+        <div class="pipeline-track-header">
+          <div class="pipeline-track-badge">
+            <span>🌿</span> Git Workflow &amp; CI/CD Pipeline
+          </div>
+          <div class="pipeline-track-legend">
+            <span class="legend-pill"><code>main</code> = final/trusted</span>
+            <span class="legend-pill"><code>feature/*</code> = dev work</span>
+            <span class="legend-pill"><code>PR</code> = review + CI</span>
+            <span class="legend-pill"><code>CI/CD</code> = test → build → deploy</span>
+          </div>
+        </div>
+
+        <!-- Git Flow Nodes -->
+        <div class="track-flow" id="gitFlow">
+          <div class="flow-node">
+            <span class="flow-icon">📋</span>
+            <span class="flow-label">Issue</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">🌿</span>
+            <span class="flow-label">Feature Branch</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">💻</span>
+            <span class="flow-label">Code + Commit</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">🚀</span>
+            <span class="flow-label">Push</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">🔀</span>
+            <span class="flow-label">PR → main</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node highlight">
+            <span class="flow-icon">⚙️</span>
+            <span class="flow-label">CI: Test + Lint</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">👀</span>
+            <span class="flow-label">Code Review</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">✅</span>
+            <span class="flow-label">Merge → main</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">📦</span>
+            <span class="flow-label">Build</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">🧪</span>
+            <span class="flow-label">Staging</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node highlight-prod">
+            <span class="flow-icon">🌐</span>
+            <span class="flow-label">Production</span>
+          </div>
+        </div>
+
+        <!-- Branching Model Snippet -->
+        <div class="track-branch-bar">
+          <span class="branch-tag main-tag"><code>main</code></span>
+          <span class="branch-sep">├──</span>
+          <span class="branch-tag feat-tag"><code>feature/login</code></span>
+          <span class="branch-sep">├──</span>
+          <span class="branch-tag feat-tag"><code>feature/payment</code></span>
+          <span class="branch-sep">├──</span>
+          <span class="branch-tag feat-tag"><code>feature/ml-model</code></span>
+          <span class="branch-sep">└──</span>
+          <span class="branch-tag fix-tag"><code>fix/api-bug</code></span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="pipeline-track-divider"></div>
+
+      <!-- ── TRACK 2: REAL-TIME AI INFERENCE PIPELINE ── -->
+      <div class="pipeline-track">
+        <div class="pipeline-track-header">
+          <div class="pipeline-track-badge">
+            <span>⚡</span> Real-Time AI Inference Architecture
+          </div>
+          <div class="pipeline-track-legend">
+            <span class="legend-pill">DeepStream / TensorRT</span>
+            <span class="legend-pill">60+ FPS</span>
+            <span class="legend-pill">&lt;20ms Latency</span>
+          </div>
+        </div>
+
+        <!-- AI Inference Nodes -->
+        <div class="track-flow ai-flow" id="aiFlow">
+          <div class="flow-node">
+            <span class="flow-icon">📷</span>
+            <span class="flow-label">Sensors &amp; Ingestion</span>
+            <span class="flow-sub">RTSP / Multi-Camera</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">⚙️</span>
+            <span class="flow-label">Hardware Acceleration</span>
+            <span class="flow-sub">NVDEC / Batching</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node highlight">
+            <span class="flow-icon">🧠</span>
+            <span class="flow-label">Neural Engine</span>
+            <span class="flow-sub">TensorRT FP16 / Triton</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node">
+            <span class="flow-icon">🎯</span>
+            <span class="flow-label">Temporal Tracking</span>
+            <span class="flow-sub">TPT &amp; State Filter</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-node highlight-prod">
+            <span class="flow-icon">📡</span>
+            <span class="flow-label">Event Broker &amp; API</span>
+            <span class="flow-sub">gRPC / Dashboards</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ENGINEERING METRICS
+════════════════════════════════════════════════════ -->
+<section id="metrics">
+  <div class="container">
+
+    <div class="fade-up">
+      <div class="section-eyebrow">Results</div>
+      <h2 class="section-title">Engineering by<br>the numbers</h2>
+      <p class="section-sub">Real metrics from real projects — no fabricated statistics.</p>
+    </div>
+
+    <div class="metrics-grid">
+
+      <div class="metric-card fade-up">
+        <div class="metric-value"><span class="metric-accent">99.80</span>%</div>
+        <div class="metric-label">Test Accuracy</div>
+        <div class="metric-context">Hybrid CNN–MobileViT for renal calculi detection</div>
+      </div>
+
+      <div class="metric-card fade-up" style="transition-delay:0.08s">
+        <div class="metric-value"><span class="metric-accent">18.5</span>×</div>
+        <div class="metric-label">Model Compression</div>
+        <div class="metric-context">Knowledge distillation — zero accuracy loss</div>
+      </div>
+
+      <div class="metric-card fade-up" style="transition-delay:0.16s">
+        <div class="metric-value"><span class="metric-accent">97.51</span>%</div>
+        <div class="metric-label">Fracture Detection</div>
+        <div class="metric-context">Vision Transformer benchmark on 4,083 X-rays</div>
+      </div>
+
+      <div class="metric-card fade-up" style="transition-delay:0.24s">
+        <div class="metric-value"><span class="metric-accent">3</span></div>
+        <div class="metric-label">Research Papers</div>
+        <div class="metric-context">1 IEEE published · 2 under peer review</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
      PUBLICATIONS
 ════════════════════════════════════════════════════ -->
 <section id="publications">
@@ -802,7 +1041,7 @@
       <div class="edu-stats">
         <div class="edu-gpa" aria-label="GPA: 3.74">3.74</div>
         <div class="edu-gpa-label">GPA / 4.00</div>
-        <div class="edu-duration">2022 – May 2026</div>
+        <div class="edu-duration">2022 – 2026</div>
       </div>
     </div>
 
@@ -861,10 +1100,11 @@
 <section id="contact">
   <div class="container">
 
-    <div class="fade-up">
+    <div class="contact-closing fade-up">
       <div class="section-eyebrow">Contact</div>
-      <h2 class="section-title">Ready to build<br>something great?</h2>
-      <p class="section-sub">Whether you're hiring, collaborating on research, or just want to talk AI — my inbox is always open.</p>
+      <div class="contact-closing-line">
+        Let's build something<br>that <span class="accent">actually matters.</span>
+      </div>
     </div>
 
     <div class="contact-grid">
@@ -872,7 +1112,7 @@
       <!-- Left: info -->
       <div class="fade-up">
         <p class="contact-intro">
-          I'm currently <strong>open to full-time AI/ML engineering roles, research collaborations, and internships</strong> — ideally starting around or after my May 2026 graduation. I bring both research depth and practical engineering experience, which is a combination that's genuinely rare at this stage.
+          I'm currently <strong>open to full-time AI/ML engineering roles, research collaborations, and internships</strong>. I bring both research depth and practical engineering experience — a combination that's genuinely rare at this stage.
         </p>
 
         <div class="contact-info-list">
@@ -959,7 +1199,7 @@
         <a href="https://linkedin.com/in/iamajmunna" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/iam-ajmunna" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:iam.ajmunna@gmail.com">Email</a>
-        <a href="Assaduzzaman_Munna_CV.pdf" download>CV</a>
+        <a href="assets/docs/Assaduzzaman_Munna_CV.pdf" download>CV</a>
       </nav>
       <button class="footer-back-top" id="backToTop" aria-label="Back to top">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
@@ -971,6 +1211,6 @@
 
 
 <!-- ── Script ── -->
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

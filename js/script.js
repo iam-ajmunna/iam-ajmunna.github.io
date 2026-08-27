@@ -1,5 +1,7 @@
 /* ============================================================
    ASSADUZZAMAN MUNNA — Portfolio Script
+   Motion system: scroll progress, word reveal, pipeline activation,
+   fade-up/blur-in entrances, cursor glow, category filtering
    ============================================================ */
 
 /* ── NAV: hamburger toggle ── */
@@ -9,6 +11,7 @@ const navLinks  = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
 });
 
 // Close mobile menu when a link is clicked
@@ -16,6 +19,7 @@ document.querySelectorAll('#navLinks a').forEach(a => {
   a.addEventListener('click', () => {
     hamburger.classList.remove('open');
     navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
   });
 });
 
@@ -49,8 +53,19 @@ function updateActiveNav() {
 }
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 
-/* ── SCROLL FADE-UP ── */
-const fadeEls = document.querySelectorAll('.fade-up');
+/* ── SCROLL PROGRESS BAR (Redline) ── */
+const scrollProgress = document.getElementById('scrollProgress');
+
+function updateScrollProgress() {
+  const scrollTop    = window.scrollY;
+  const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollProgress.style.width = scrollPercent + '%';
+}
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+/* ── SCROLL FADE-UP & BLUR-IN ENTRANCES ── */
+const fadeEls = document.querySelectorAll('.fade-up, .blur-in');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -69,11 +84,102 @@ fadeEls.forEach(el => fadeObserver.observe(el));
 // Trigger hero elements immediately on load
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 120);
+    document.querySelectorAll('#hero .blur-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 150);
     });
-  }, 80);
+  }, 100);
 });
+
+/* ── PHILOSOPHY: Word Reveal ── */
+const philosophyQuote = document.getElementById('philosophyQuote');
+
+if (philosophyQuote) {
+  // Wrap each word in a span for staggered reveal
+  const originalHTML = philosophyQuote.innerHTML;
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = originalHTML;
+
+  function wrapWords(node) {
+    const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    textNodes.forEach(textNode => {
+      const words = textNode.textContent.split(/(\s+)/);
+      const fragment = document.createDocumentFragment();
+      words.forEach(word => {
+        if (word.trim() === '') {
+          fragment.appendChild(document.createTextNode(word));
+        } else {
+          const span = document.createElement('span');
+          span.className = 'word';
+          span.textContent = word;
+          fragment.appendChild(span);
+        }
+      });
+      textNode.parentNode.replaceChild(fragment, textNode);
+    });
+  }
+
+  wrapWords(tempDiv);
+  philosophyQuote.innerHTML = tempDiv.innerHTML;
+
+  const words = philosophyQuote.querySelectorAll('.word');
+
+  const quoteObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        words.forEach((word, i) => {
+          setTimeout(() => {
+            word.classList.add('visible');
+          }, i * 45);
+        });
+        quoteObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  quoteObserver.observe(philosophyQuote);
+}
+
+/* ── SYSTEMS: Git Flow & AI Flow Sequential Activation ── */
+const gitFlow = document.getElementById('gitFlow');
+if (gitFlow) {
+  const nodes = gitFlow.querySelectorAll('.flow-node');
+  const flowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        nodes.forEach((node, i) => {
+          setTimeout(() => {
+            node.classList.add('active');
+            setTimeout(() => node.classList.remove('active'), 1000);
+          }, i * 140);
+        });
+        flowObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  flowObserver.observe(gitFlow);
+}
+
+const aiFlow = document.getElementById('aiFlow');
+if (aiFlow) {
+  const nodes = aiFlow.querySelectorAll('.flow-node');
+  const aiObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        nodes.forEach((node, i) => {
+          setTimeout(() => {
+            node.classList.add('active');
+            setTimeout(() => node.classList.remove('active'), 1200);
+          }, i * 200);
+        });
+        aiObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  aiObserver.observe(aiFlow);
+}
 
 /* ── CONTACT FORM ── */
 function handleContactForm() {
@@ -95,18 +201,18 @@ function handleContactForm() {
   });
 
   if (!name) {
-    nameEl.style.borderColor = '#EF4444';
-    nameEl.style.boxShadow   = '0 0 0 3px rgba(239,68,68,0.12)';
+    nameEl.style.borderColor = '#C51624';
+    nameEl.style.boxShadow   = '0 0 0 3px rgba(197,22,36,0.12)';
     valid = false;
   }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    emailEl.style.borderColor = '#EF4444';
-    emailEl.style.boxShadow   = '0 0 0 3px rgba(239,68,68,0.12)';
+    emailEl.style.borderColor = '#C51624';
+    emailEl.style.boxShadow   = '0 0 0 3px rgba(197,22,36,0.12)';
     valid = false;
   }
   if (!message) {
-    messageEl.style.borderColor = '#EF4444';
-    messageEl.style.boxShadow   = '0 0 0 3px rgba(239,68,68,0.12)';
+    messageEl.style.borderColor = '#C51624';
+    messageEl.style.boxShadow   = '0 0 0 3px rgba(197,22,36,0.12)';
     valid = false;
   }
   if (!valid) return;
@@ -159,7 +265,7 @@ const skillObserver = new IntersectionObserver((entries) => {
 skillCards.forEach(card => {
   card.style.opacity   = '0';
   card.style.transform = 'translateY(16px)';
-  card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  card.style.transition = 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
   skillObserver.observe(card);
 });
 
@@ -167,7 +273,7 @@ skillCards.forEach(card => {
 function animateCounter(el, target, suffix = '') {
   const isFloat    = String(target).includes('.');
   const decimals   = isFloat ? String(target).split('.')[1].length : 0;
-  const duration   = 1200;
+  const duration   = 1400;
   const startTime  = performance.now();
 
   function step(now) {
@@ -191,7 +297,7 @@ const statsObserver = new IntersectionObserver((entries) => {
       const statEls = document.querySelectorAll('.hero-stat-value');
       const values  = [
         { val: '3.74', suffix: '' },
-        { val: '2',    suffix: '×' },
+        { val: '3',    suffix: '×' },
         { val: '99.8', suffix: '%' }
       ];
       statEls.forEach((el, i) => {
@@ -221,12 +327,12 @@ if (window.matchMedia('(pointer: fine)').matches) {
   const glow = document.createElement('div');
   glow.style.cssText = `
     position: fixed;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
-    background: radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(197,22,36,0.04) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     transition: opacity 0.3s;
     will-change: left, top;
